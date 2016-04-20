@@ -17,15 +17,21 @@ export class MainView extends React.Component {
     this.props.loadRandomWords();
   }
 
+  getRandomWord (arrayOfWords) {
+    const arrayLength = arrayOfWords.length;
+    const randomIndex = Math.floor(Math.random() * arrayLength);
+    return arrayOfWords[randomIndex];
+  }
+
   render () {
-    console.log(this.props);
-    const { firstWord, secondWord, thirdWord } = this.props.randomWord;
+    //console.log(this.props.randomWord);
+    const randomWords = this.props.randomWord.wordsArray;
     return (
       <div className='cool-story-bro-view'>
         <p>Ahh cool story bro</p>
-        <p className='cool-story-word-part'>{firstWord}</p>
-        <p className='cool-story-word-part'>{secondWord}</p>
-        <p className='cool-story-word-part'>{thirdWord}</p>
+        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
+        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
+        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
       </div>
     );
   }

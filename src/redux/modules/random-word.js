@@ -1,3 +1,7 @@
+import positiveWordSynonyms from 'fixtures/positive-word-synonyms.json'
+import storySynonyms from 'fixtures/story-synonyms.json'
+import brotherSynonyms from 'fixtures/brother-synonyms.json'
+
 // ------------------------------------
 // Constants
 // ------------------------------------
@@ -21,7 +25,7 @@ export const actions = {
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [LOAD_RANDOM_WORDS]: (state, action) => {return {firstWord: 'Cool', secondWord: 'Story', thirdWord: 'Bro'}}
+  [LOAD_RANDOM_WORDS]: (state, action) => {return Object.assign({}, state, {firstWord: 'Cool', secondWord: 'Story', thirdWord: 'Bro'})}
 };
 
 // ------------------------------------
@@ -30,7 +34,8 @@ const ACTION_HANDLERS = {
 const initialState = {
   firstWord: '',
   secondWord: '',
-  thirdWord: ''
+  thirdWord: '',
+  wordsArray: [positiveWordSynonyms, storySynonyms, brotherSynonyms]
 };
 export default function randomWordReducer (state = initialState, action): number {
   const handler = ACTION_HANDLERS[action.type];
