@@ -1,27 +1,27 @@
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const LOAD_RANDOM_WORD = 'LOAD_RANDOM_WORD';
+export const LOAD_RANDOM_WORDS = 'LOAD_RANDOM_WORDS';
 
 // ------------------------------------
 // Actions
 // ------------------------------------
 
-export function loadRandomWord () {
+export function loadRandomWords () {
  return {
-   type: LOAD_RANDOM_WORD
+   type: LOAD_RANDOM_WORDS
  }
 }
 
 export const actions = {
-  loadRandomWord
+  loadRandomWords
 };
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [LOAD_RANDOM_WORD]: (state, action) => {return {firstWord: 'Cool', secondWord: 'Story', thirdWord: 'Bro'}}
+  [LOAD_RANDOM_WORDS]: (state, action) => {return {firstWord: 'Cool', secondWord: 'Story', thirdWord: 'Bro'}}
 };
 
 // ------------------------------------

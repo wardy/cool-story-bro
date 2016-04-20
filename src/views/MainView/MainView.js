@@ -1,6 +1,6 @@
 /* @flow */
 import React, { PropTypes } from 'react';
-import { loadRandomWord } from '../../redux/modules/random-word';
+import { loadRandomWords } from '../../redux/modules/random-word';
 import { connect } from 'react-redux';
 
 // We avoid using the `@connect` decorator on the class definition so
@@ -10,11 +10,11 @@ export class MainView extends React.Component {
 
   static propTypes = {
     randomWord: PropTypes.object.isRequired,
-    loadRandomWord: PropTypes.func.isRequired
+    loadRandomWords: PropTypes.func.isRequired
   };
 
   componentWillMount() {
-    this.props.loadRandomWord();
+    this.props.loadRandomWords();
   }
 
   render () {
@@ -35,5 +35,5 @@ const mapStateToProps = (state) => ({
   randomWord: state.randomWord
 });
 export default connect((mapStateToProps), {
-  loadRandomWord
+  loadRandomWords
 })(MainView);
