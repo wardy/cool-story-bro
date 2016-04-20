@@ -30,8 +30,8 @@ export class MainView extends React.Component {
       <div className='cool-story-bro-view'>
         <p>Ahh cool story bro</p>
         <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
-        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
-        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[0].positiveWords)}</p>
+        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[1].storySynonyms)}</p>
+        <p className='cool-story-word-part'>{this.getRandomWord(randomWords[2].brotherSynonyms)}</p>
       </div>
     );
   }
