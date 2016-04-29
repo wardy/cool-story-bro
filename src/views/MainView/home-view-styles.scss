@@ -14,4 +14,18 @@
   width: 400px;
   height: 300px;
   overflow: hidden;
+
+  p {
+    animation: words 1.5s ease-in;
+  }
+}
+
+@keyframes words {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
