@@ -1,0 +1,17 @@
+.cool-story-bro-view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  min-height: 100vh;
+}
+
+.cool-story-phrase-component-container {
+  background-color: grey;
+  text-align: center;
+  line-height: 300px;
+  margin: 0 20px;
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+}
